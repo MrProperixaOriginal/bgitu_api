@@ -4,7 +4,7 @@ import time
 
 api_link = "https://official-joke-api.appspot.com/random_joke"
 n = input("Сколько анекдотов вы хотите послушать?")
-for i in range(n):
+for i in range(int(n)):
     response = requests.get(api_link)
     if response.status_code == 200:
         print(json.loads(response.text)["setup"])
